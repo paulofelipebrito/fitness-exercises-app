@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 
 import Logo from '../assets/images/Logo.png';
 
-const Navbar = () => (
-  <Stack 
+const Navbar = () => {  
+  const location = useLocation(); 
+  let exerciseLink = "/#exercises";
+  location.pathname === "/" ? exerciseLink = "/#exercises" : exerciseLink = "/";
+
+  return (<Stack 
     direction="row" 
     justifyContent="space-around" 
     sx={{ 
@@ -26,9 +31,10 @@ const Navbar = () => (
       alignItems="flex-end"
     >
       <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
-      <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a>
+      <a href={exerciseLink} style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a>
+      
     </Stack>
-  </Stack>
-);
+  </Stack>)
+};
 
 export default Navbar;
