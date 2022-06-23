@@ -11,7 +11,6 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      console.log(process.env.REACT_APP_RAPID_API_KEY)
       const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
 
       setBodyParts(['all', ...bodyPartsData]);
