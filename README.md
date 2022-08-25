@@ -209,4 +209,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 [Typescript-url]: (https://www.typescriptlang.org)
-[deploy-site]: https://fitnessexerciseapp.netlify.app
+[deploy-url]: https://fitnessexerciseapp.netlify.app
